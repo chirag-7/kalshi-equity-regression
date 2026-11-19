@@ -1,0 +1,21 @@
+{
+  "cpi_mean_abs_revision_bps": 2.1778155706727214,
+  "other_mean_abs_revision_bps": 0.8983620996608026,
+  "cpi_median_abs_revision_bps": 1.020408163265385,
+  "other_median_abs_revision_bps": 0.5102040816326259,
+  "mean_abs_revision_ratio": 2.4242068665797523,
+  "zero_revision_share": 0.20909886264216973,
+  "relative_return_sd_pp": 0.7455935937465578,
+  "relative_return_mean_pp": -0.01972088926623783,
+  "relative_return_p05_pp": -1.1672914568952166,
+  "relative_return_p95_pp": 1.1946883411736091,
+  "c_yield_correlation": -0.4712569239700085,
+  "iwm_total_return_pct": 38.6155584810028,
+  "spy_total_return_pct": 80.99516901704587,
+  "minute_candles_returned": 70,
+  "minute_trade_bars_returned": 67,
+  "minute_trade_bars_in_plot": 56,
+  "minute_plot_min_price_cents": 4.0,
+  "minute_plot_max_price_cents": 21.0,
+  "hourly_candles_returned": 13
+}

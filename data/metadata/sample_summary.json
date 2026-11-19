@@ -1,0 +1,20 @@
+{
+  "rows": 1143,
+  "first": "2021-12-02",
+  "last": "2026-09-30",
+  "meeting_targets": 40,
+  "cpi_days": 54,
+  "non_cpi_days": 1089,
+  "nonzero_revisions": 904,
+  "both_days_positive_volume": 1077,
+  "raw_moment_rows": 7657,
+  "raw_moment_events": 52,
+  "raw_moment_first": "2021-07-02",
+  "raw_moment_last": "2026-10-23",
+  "exclusions": {
+    "Missing same meeting pair": 15,
+    "FOMC decision day": 39,
+    "Missing conventional input": 14
+  },
+  "status": "Preliminary UTC daily EDA; not a synchronized regression sample"
+}

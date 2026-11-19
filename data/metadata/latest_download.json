@@ -1,0 +1,17 @@
+{
+  "retrieved_at_utc": "2026-11-19T07:58:21.254876+00:00",
+  "files": [
+    {
+      "file": "kalshi_1m_example.json",
+      "interval_minutes": 1,
+      "candles": 70,
+      "sha256": "d4606aadd20830fe6c0bfc14e0f07910b125bec622ae76629028223aa03f4ed1"
+    },
+    {
+      "file": "kalshi_60m_example.json",
+      "interval_minutes": 60,
+      "candles": 13,
+      "sha256": "1a822e82b854c0e4e4fd9f39afb3ee7b6fa119280870864e2b28d58a55576636"
+    }
+  ]
+}
