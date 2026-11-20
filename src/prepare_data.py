@@ -69,6 +69,8 @@ def main():
     returns = px.pct_change(fill_method=None) * 100
     yields = fred()
     ff = factors()
+    yields.loc["2021-12-01":"2026-11-03"].to_csv(PROCESSED / "treasury_vix_daily.csv", index_label="date")
+    ff.loc["2021-12-01":END].to_csv(PROCESSED / "equity_factors_daily.csv", index_label="date")
     calendar = json.loads((ROOT / "config/event_calendar.json").read_text())
     meetings = sorted(calendar["fomc_decision_dates"])
     cpi = set(calendar["cpi_release_dates"])

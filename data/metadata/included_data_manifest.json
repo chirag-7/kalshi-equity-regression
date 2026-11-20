@@ -1,0 +1,196 @@
+{
+  "description": "Source snapshots and prepared files included for direct use without API downloads",
+  "files": [
+    {
+      "path": "data/raw/candidate_dates.json",
+      "bytes": 317972,
+      "sha256": "d974d142a1e29719c7f8a8cdceb58b4582a8584a2aafd5255a53916df7e2c30c"
+    },
+    {
+      "path": "data/raw/daily_distributions_fed_levels.csv",
+      "bytes": 1448812,
+      "sha256": "02a7ba13ba7b965480f07b7957de274a2b17731266798b958c3cea14c5e3d64b",
+      "rows": 7657,
+      "columns": [
+        "date",
+        "contract_preamble",
+        "volume",
+        "0",
+        "0.25",
+        "0.5",
+        "0.75",
+        "1",
+        "1.25",
+        "1.5",
+        "1.75",
+        "2",
+        "2.25",
+        "2.5",
+        "2.75",
+        "3",
+        "3.25",
+        "3.5",
+        "3.75",
+        "4",
+        "4.25",
+        "4.5",
+        "4.75",
+        "5",
+        "5.25",
+        "5.5",
+        "5.75",
+        "6",
+        "6.25",
+        "6.5",
+        "-0.25"
+      ]
+    },
+    {
+      "path": "data/raw/daily_moments_fed_levels.csv",
+      "bytes": 954504,
+      "sha256": "3f0b233f2cd644a58246f747186bf5810fbed5eee9df67bf30bdd0b307b92aff",
+      "rows": 7657,
+      "columns": [
+        "date",
+        "contract_preamble",
+        "expiry_date",
+        "daily_volume",
+        "mean",
+        "median",
+        "mode",
+        "skewness",
+        "kurtosis",
+        "variance"
+      ]
+    },
+    {
+      "path": "data/raw/fama_french_daily.zip",
+      "bytes": 150489,
+      "sha256": "e58577223032aa45071a46686f7068900c371b516c9eb04e28e974c34264f84f"
+    },
+    {
+      "path": "data/raw/fred_daily.zip",
+      "bytes": 110597,
+      "sha256": "016004c0b92cc460da532f184aa36669cb8fac16d9c96e9a29bbba72b8dbce70"
+    },
+    {
+      "path": "data/raw/iwm_daily.json",
+      "bytes": 139089,
+      "sha256": "595ecb377313b1b3309f428d7af964be377012fe9a70904cc3360e9fda3ce10f"
+    },
+    {
+      "path": "data/raw/kalshi_1m_example.json",
+      "bytes": 38922,
+      "sha256": "d4606aadd20830fe6c0bfc14e0f07910b125bec622ae76629028223aa03f4ed1"
+    },
+    {
+      "path": "data/raw/kalshi_60m_example.json",
+      "bytes": 7293,
+      "sha256": "1a822e82b854c0e4e4fd9f39afb3ee7b6fa119280870864e2b28d58a55576636"
+    },
+    {
+      "path": "data/raw/spy_daily.json",
+      "bytes": 135187,
+      "sha256": "1f3086243733c4a6bee9bd5e0d8ab602962c7b5dc346dcaceeb911d3b8072531"
+    },
+    {
+      "path": "data/processed/daily_eda_candidate.csv",
+      "bytes": 233406,
+      "sha256": "e8ad758a1863536ab9e1a84fe4ea9488b6a7bb6ee683c52bdbef47fab4b85763",
+      "rows": 1143,
+      "columns": [
+        "date",
+        "previous_equity_date",
+        "event",
+        "meeting_date",
+        "days_to_meeting",
+        "iwm_return_pct",
+        "spy_return_pct",
+        "relative_return_pp",
+        "market_excess_pct",
+        "yield2_change_bps",
+        "vix_change_points",
+        "kalshi_mean_rate_pct",
+        "kalshi_easing_bps",
+        "cpi_day",
+        "volume_today",
+        "volume_previous",
+        "timestamp_aligned"
+      ]
+    },
+    {
+      "path": "data/processed/equity_factors_daily.csv",
+      "bytes": 52004,
+      "sha256": "834f1394141439e460ba0262739ba423172279b619f35c69df5154161bce8460",
+      "rows": 1212,
+      "columns": [
+        "date",
+        "Mkt-RF",
+        "SMB",
+        "HML",
+        "RMW",
+        "CMA",
+        "RF"
+      ]
+    },
+    {
+      "path": "data/processed/etf_adjusted_prices.csv",
+      "bytes": 57169,
+      "sha256": "f07489c18e254e58b1a2618c91d93e8f30ca2128749ea3f8cd935962d884c632",
+      "rows": 1212,
+      "columns": [
+        "date",
+        "IWM",
+        "SPY"
+      ]
+    },
+    {
+      "path": "data/processed/kalshi_1m_example.csv",
+      "bytes": 7566,
+      "sha256": "3a33d50d9b251708052f5dcfe5bec0bdbf65fd22e3f544a6dd6aba13d57dd1af",
+      "rows": 70,
+      "columns": [
+        "ticker",
+        "interval_minutes",
+        "end_period_ts",
+        "price",
+        "yes_bid",
+        "yes_ask",
+        "volume",
+        "time_utc",
+        "time_et",
+        "has_trade"
+      ]
+    },
+    {
+      "path": "data/processed/kalshi_60m_example.csv",
+      "bytes": 1504,
+      "sha256": "f4865bd8e043142a3c76d9a55f6afcab3f55f3edd10eabef2e80ce251a4c07b3",
+      "rows": 13,
+      "columns": [
+        "ticker",
+        "interval_minutes",
+        "end_period_ts",
+        "price",
+        "yes_bid",
+        "yes_ask",
+        "volume",
+        "time_utc",
+        "time_et",
+        "has_trade"
+      ]
+    },
+    {
+      "path": "data/processed/treasury_vix_daily.csv",
+      "bytes": 33804,
+      "sha256": "5738d2ebbe67f62ac3037be74921738a8345fe76df0253fe601942faf87cc641",
+      "rows": 1284,
+      "columns": [
+        "date",
+        "DGS2",
+        "DGS10",
+        "VIXCLS"
+      ]
+    }
+  ]
+}

@@ -3,9 +3,5 @@ __pycache__/
 .DS_Store
 .env
 .env.*
-data/raw/*
-!data/raw/README.md
-data/processed/*
-!data/processed/README.md
 work/
 *.log

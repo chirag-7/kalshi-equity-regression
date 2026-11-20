@@ -6,6 +6,23 @@ A STAT GU4205/GR5205 linear regression project. We ask whether changes in Kalshi
 
 The description includes the research question, collected-data description, descriptive statistics, four commented plots, four nested models and objectives. Figure 3 shows three dimensions: meeting horizon, revision magnitude and trading volume.
 
+## Get the data without running code
+
+The collected data is included in this repository. Open a file below and use **Download raw file**, or choose **Code → Download ZIP** to get the whole project. No API calls or command-line downloads are needed to use this snapshot.
+
+| File | Contents |
+| --- | --- |
+| [Daily project dataset](data/processed/daily_eda_candidate.csv) | 1,143 candidate dates with returns, Kalshi revisions, conventional controls, CPI indicators and meeting identifiers |
+| [IWM and SPY adjusted prices](data/processed/etf_adjusted_prices.csv) | Daily adjusted prices used for the equity performance plot |
+| [Treasury yields and VIX](data/processed/treasury_vix_daily.csv) | DGS2, DGS10 and VIXCLS in a regular CSV |
+| [Daily equity factors](data/processed/equity_factors_daily.csv) | Market, size, value, profitability, investment and risk-free series in a regular CSV |
+| [Kalshi minute example](data/processed/kalshi_1m_example.csv) | June 2023 contract candles, trade prices, bid/ask prices, volume and timestamps |
+| [Kalshi hourly example](data/processed/kalshi_60m_example.csv) | The same contract at hourly frequency |
+| [Full collected Kalshi daily expectations](data/raw/daily_moments_fed_levels.csv) | 7,657 source date-and-meeting observations |
+| [Full collected Kalshi daily distributions](data/raw/daily_distributions_fed_levels.csv) | Source distributions across potential rate outcomes |
+
+See the [data guide and column definitions](data/README.md). The minute and hourly files are verified examples for one contract and one requested day, not a full intraday history of every Fed contract. The daily project dataset remains preliminary pending timestamp alignment and quote-quality checks.
+
 ## Current data
 
 The frozen daily collection was obtained on 4 November 2026. Its preliminary overlap contains **1,143 candidate dates, 40 Fed meeting targets and 54 CPI days**, from 2 December 2021 through 30 September 2026. Direct API downloads on 19 November 2026 also confirmed minute and hourly access for a June 2023 Fed contract.
@@ -43,8 +60,8 @@ See [the methodology](docs/methodology.md) for units, formulas, timing rules, te
 
 ```text
 config/                 Team details and official announcement calendar
-data/raw/               Local original downloads, excluded from Git
-data/processed/         Local candidate panel and intraday examples
+data/raw/               Collected source files included in the repository
+data/processed/         Ready-to-open CSVs and intraday examples
 data/metadata/          Source URLs, frozen-file hashes and sample counts
 docs/                   Methodology and references
 reports/                Word and Markdown project description
@@ -54,24 +71,23 @@ src/                    Download, preparation, EDA and report scripts
 tests/                  Timing and endpoint safeguards
 ```
 
-Downloaded raw and processed market histories stay local. The repository includes their provenance, download code, summary tables and figures.
+The repository includes the frozen source files, processed CSVs, provenance, download code, summary tables and figures. Downloading the project also downloads these data files.
 
 ## Reproduce
 
-Use Python 3.12 or later. From the repository root:
+To use the CSVs, just download them or the repository ZIP. To rebuild the tables and report from the included data, use Python 3.12 or later. From the repository root:
 
 ```bash
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
-python src/download_data.py
 python src/prepare_data.py
 python src/descriptive_analysis.py
 python src/build_description.py
 python -m unittest discover -s tests -v
 ```
 
-The download script uses public HTTP endpoints and needs no API key for the included examples. Source files can be updated or revised, so a later run need not be byte-identical to the frozen collection. Compare [`frozen_snapshot_manifest.json`](data/metadata/frozen_snapshot_manifest.json) and [`sample_summary.json`](data/metadata/sample_summary.json) before changing the reported numbers.
+`python src/download_data.py` is optional and only needed to fetch the inputs again. It uses public HTTP endpoints and needs no API key for the included examples. Source files can be updated or revised, so a later run need not be byte-identical to the frozen collection. Compare [`frozen_snapshot_manifest.json`](data/metadata/frozen_snapshot_manifest.json) and [`sample_summary.json`](data/metadata/sample_summary.json) before changing the reported numbers.
 
 To download only the minute and hourly example, run `python src/download_data.py --intraday-only`. Candle requests are divided into windows below the API's 5,000-period limit. The script reads the current historical cutoff to select the correct endpoint.
 
