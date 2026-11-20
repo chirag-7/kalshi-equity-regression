@@ -1,6 +1,6 @@
 # Project data
 
-All collected source files and the prepared CSVs are included in this repository. No API key or download command is needed to use the snapshot. On GitHub, open a file and select **Download raw file**. To get everything at once, select **Code → Download ZIP** on the repository homepage.
+All collected source files and the prepared CSVs are included in this repository. On GitHub, open a file and select **Download raw file**. To get everything at once, select **Code → Download ZIP** on the repository homepage.
 
 ## Start here
 
